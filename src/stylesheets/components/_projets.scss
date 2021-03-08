@@ -1,0 +1,158 @@
+.c-projets {
+
+  &__container {
+    max-width: map-get($container-max-widths, 'lg');
+    margin-top: map-get($spacers, 6);
+    margin-bottom: map-get($spacers, 6);
+
+    @include media-breakpoint-up(lg) {
+      margin-top: map-get($spacers, 4);
+      margin-bottom: map-get($spacers, 8);
+    }
+  }
+
+  &__row {
+
+    &--titre {
+      @extend .text-center;
+      margin-bottom: map-get($spacers, 5);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: map-get($spacers, 6);
+      }
+
+      h2 {
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        color: $green;
+        font-size: $font-size-lg;
+        margin-bottom: map-get($spacers, 5);
+        padding-bottom: map-get($spacers, 4);
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: map-get($spacers, 6);
+          padding-bottom: map-get($spacers, 5);
+          font-size: $h2-font-size;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 54px;
+          height: 8px;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background: linear-gradient(0.10turn, $cyan, $yellow);
+        }
+      }
+
+      p {
+        @extend .mb-0;
+        font-size: $font-size-sm;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-lg;
+        }
+      }
+    }
+
+    &--projet {
+      @extend .text-center;
+
+      h4 {
+        font-weight: 500;
+        font-size: $font-size-lg;
+        margin-bottom: map-get($spacers, 5);
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: map-get($spacers, 6);
+          font-size: $h3-font-size;
+        }
+      }
+
+    }
+  }
+
+  &__card {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: map-get($spacers, 2);
+      background: linear-gradient(0.10turn, $cyan, $yellow);
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+    }
+
+    figure {
+      position: relative;
+      background-color: $black;
+      border-radius: $border-radius;
+      overflow: hidden;
+      @extend .mb-0;
+
+      img {
+        transition: $transition-base;
+        opacity: 0.6;
+      }
+
+      figcaption {
+        font-size: $h4-font-size;
+        line-height: $line-height-sm;
+        font-weight: 700;
+        transition: $transition-base;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @extend .px-3;
+        transform: translateY(-50%);
+        color: $white;
+      }
+    }
+
+    span {
+      position: absolute;
+      transition: $transition-base;
+      bottom: 0;
+      right: $spacer;
+      color: $white;
+    }
+
+    i {
+      position: absolute;
+      transition: $transition-base;
+      bottom: $spacer;
+      left: $spacer;
+      color: $yellow;
+    }
+
+    &:hover,
+    &:focus {
+
+      figure {
+        img {
+          opacity: 0.2;
+        }
+
+        figcaption {
+          color: $yellow;
+        }
+      }
+
+      span {
+        color: $yellow;
+      }
+
+      i {
+        left: map-get($spacers, 5);
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.c-header {
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
+    padding-bottom: map-get($spacers, 6);
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: map-get($spacers, 4);
+    }
+  }
+
+  &__row {
+    //
+  }
+
+  &__col {
+    &--logo {
+      span {
+        @extend .d-inline-block;
+        background-color: $white;
+        padding: map-get($spacers, 2) map-get($spacers, 3);
+        border-bottom-left-radius: $border-radius-sm;
+        border-bottom-right-radius: $border-radius-sm;
+        box-shadow: $box-shadow;
+        width: 100%;
+        max-width: 110px;
+
+        @include media-breakpoint-up(lg) {
+          max-width: 170px;
+        }
+      }
+    }
+
+    &--burger {
+      span {
+        z-index: 12;
+
+        &#burger {
+          display: inline;
+        }
+
+        &#close {
+          display: none;
+        }
+      }
+    }
+
+    &--nav {
+      > ul {
+        @extend .d-flex;
+        @extend .justify-content-between;
+        @extend .list-inline;
+        @extend .list-unstyled;
+        @extend .m-0;
+        @extend .ml-4;
+        @extend .p-0;
+        width: 100%;
+
+        > li {
+          @extend .list-inline-item;
+
+          > a:not(.btn) {
+            @extend .d-inline-block;
+            font-weight: 500;
+            color: $white;
+            text-decoration: none;
+            border-bottom: 2px solid $white;
+            @extend .pb-1;
+            text-shadow: $box-shadow-sm;
+          }
+
+          &.is-social {
+            height: 44px;
+            position: relative;
+
+            > a {
+              display: inline-block;
+              margin-right: 60px;
+            }
+
+            > ul {
+              @extend .d-flex;
+              @extend .justify-content-between;
+              @extend .align-items-center;
+              @extend .list-inline;
+              @extend .list-unstyled;
+              @extend .m-0;
+              @extend .p-0;
+              @extend .ml-4;
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-color: $green;
+              width: 44px;
+              height: 44px;
+              border-radius: 44px;
+              box-shadow: $box-shadow-lg;
+
+              li {
+                display: none;
+                color: $white;
+                text-align: center;
+
+                &:last-child {
+                  width: 44px;
+                  @extend .list-inline-item;
+                }
+              }
+            }
+
+            &.is-opened {
+              > ul {
+                z-index: 1;
+                width: 100%;
+
+                li {
+                  @extend .list-inline-item;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

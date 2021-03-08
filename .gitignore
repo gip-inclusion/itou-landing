@@ -1,13 +1,21 @@
-# Mac Os
+# Folder & file view configuration
 .DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
 
-# dotenv
-.env
+# Config
+.gitignore
+ftp-config.json
+deploy.sh
 
-# Editors
-.tm_properties
-/.vscode/
-
-# Jetbrains / Pycharm
-*.iml
+# Dev & IDE
+.sass-cache/
 .idea
+node_modules/
+.vscode
+#dist/
+
+# App
