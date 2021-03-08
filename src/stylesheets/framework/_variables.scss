@@ -271,7 +271,39 @@ $embed-responsive-aspect-ratios: join(
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../fonts/Marianne/Marianne-Light.woff2') format('woff2'),
+         url('../fonts/Marianne/Marianne-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../fonts/Marianne/Marianne-Regular.woff2') format('woff2'),
+         url('../fonts/Marianne/Marianne-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../fonts/Marianne/Marianne-Bold.woff2') format('woff2'),
+         url('../fonts/Marianne/Marianne-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../fonts/Marianne/Marianne-ExtraBold.woff2') format('woff2'),
+         url('../fonts/Marianne/Marianne-ExtraBold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -289,7 +321,7 @@ $font-weight-lighter: 300;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-weight-bolder: 700;
+$font-weight-bolder: 900;
 
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.5 !default;
@@ -302,7 +334,7 @@ $h5-font-size: $font-size-base * 1.375;
 $h6-font-size: $font-size-base * 1.25;
 
 $headings-margin-bottom: $spacer / 2 !default;
-$headings-font-family: null !default;
+$headings-font-family: $font-family-heading;
 $headings-font-weight: 700;
 $headings-line-height: 1.2;
 $headings-color: null !default;
