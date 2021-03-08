@@ -1,10 +1,10 @@
 .c-footer-nav {
-  margin-top: map-get($spacers, 3);
-  padding: map-get($spacers, 3);
+  padding-top : map-get($spacers, 3);
   border-top: 2px solid $gray-100;
 
   @include media-breakpoint-up(lg) {
-    margin-top: map-get($spacers, 6);
+    padding-top : map-get($spacers, 3);
+    padding-bottom : map-get($spacers, 3);
   }
 
   &__container {
@@ -19,14 +19,25 @@
     }
   }
 
+  &__logo {
+    transform: translateX(-22px);
+  }
+
   ul {
     @extend .d-flex;
-    @extend .justify-content-between;
+    flex-direction: column;
     @extend .list-unstyled;
     @extend .list-inline;
+    @extend .mb-0;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     li {
       @extend .list-inline-item;
+      @extend .mb-2;
     }
   }
 
@@ -40,7 +51,7 @@
 
 
 .c-footer-legal {
-  padding: map-get($spacers, 3);
+  padding: map-get($spacers, 3) 0;
   border-top: 1px solid $gray-200;
   font-size: $font-size-xs;
   color: $gray-300;
@@ -60,11 +71,13 @@
   ul {
     @extend .list-unstyled;
     @extend .list-inline;
+    @extend .mb-0;
 
     li {
       display: inline-block;
       @extend .list-inline-item;
       @extend .mr-3;
+      @extend .mb-3;
 
       &:after {
         content: '|';
@@ -76,6 +89,11 @@
       &:last-child:after {
         display: none;
       }
+    }
+
+    span {
+      display: inline-block;
+      @extend .mb-3;
     }
   }
 }

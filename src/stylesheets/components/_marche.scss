@@ -1,19 +1,25 @@
 .c-marche {
-  margin: map-get($spacers, 3) 0;
+  padding-top : map-get($spacers, 6);
+  padding-bottom : map-get($spacers, 4);
+  border-top: 2px solid $gray-100;
 
   @include media-breakpoint-up(lg) {
-    margin: map-get($spacers, 6) 0;
+    padding-top : map-get($spacers, 6);
+    padding-bottom : map-get($spacers, 6);
   }
 
   &__container {
-    max-width: map-get($container-max-widths, 'xl');
-  }
-
-  &__row {
-    //
+    max-width: map-get($container-max-widths, 'lg');
   }
 
   &__col {
-    //
+
+    &--content {
+      //
+    }
+
+    &--figure {
+      //
+    }
   }
 }

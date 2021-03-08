@@ -5,7 +5,8 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "sh deploy.sh"
   },
   "author": "David Deloo <hello@hellodeloo.com>",
   "license": "ISC",
