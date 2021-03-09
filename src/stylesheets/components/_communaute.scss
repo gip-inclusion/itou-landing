@@ -1,11 +1,11 @@
-.c-marche {
-  padding-top : map-get($spacers, 6);
-  padding-bottom : map-get($spacers, 4);
+.c-communaute {
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
   border-top: 2px solid $gray-100;
 
   @include media-breakpoint-up(lg) {
-    padding-top : map-get($spacers, 6);
-    padding-bottom : map-get($spacers, 6);
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
   }
 
   &__container {
@@ -13,7 +13,6 @@
   }
 
   &__col {
-
     &--article {
       h2 {
         position: relative;
@@ -35,20 +34,19 @@
         flex-direction: column;
         @extend .mb-0;
         @extend .p-0;
-        @extend .pb-3;
+        @extend .pb-5;
 
         @include media-breakpoint-up(lg) {
           flex-direction: row;
         }
 
-        li {
-          list-style-position: inside;
-          @extend .pr-3;
-          @extend .pb-3;
-          font-weight: $font-weight-bold;
+        > li {
+          list-style: none;
+          @extend .pr-2;
 
-          span {
-            font-weight: $font-weight-normal;
+          > ul {
+            @extend .pl-3;
+            list-style: disc;
           }
         }
       }
@@ -80,7 +78,6 @@
         }
 
         figcaption {
-
           img {
             transform: translate(-55px, -10px);
           }
@@ -93,7 +90,7 @@
       text-align: center;
 
       @include media-breakpoint-up(lg) {
-          text-align: left;
+        text-align: left;
       }
     }
 
@@ -113,7 +110,7 @@
           width: 130px;
           box-shadow: $box-shadow;
           border-radius: $border-radius-lg;
-          border-bottom: 10px solid $pink;
+          border-bottom: 10px solid $green;
 
           &:first-child {
             @extend .mb-3;
@@ -134,7 +131,7 @@
       }
 
       figcaption {
-        border-top: 10px solid $pink;
+        border-top: 10px solid $green;
       }
     }
   }

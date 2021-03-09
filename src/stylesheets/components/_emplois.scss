@@ -1,11 +1,11 @@
-.c-marche {
-  padding-top : map-get($spacers, 6);
-  padding-bottom : map-get($spacers, 4);
+.c-emplois {
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
   border-top: 2px solid $gray-100;
 
   @include media-breakpoint-up(lg) {
-    padding-top : map-get($spacers, 6);
-    padding-bottom : map-get($spacers, 6);
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
   }
 
   &__container {
@@ -13,7 +13,6 @@
   }
 
   &__col {
-
     &--article {
       h2 {
         position: relative;
@@ -80,7 +79,6 @@
         }
 
         figcaption {
-
           img {
             transform: translate(-55px, -10px);
           }
@@ -93,7 +91,7 @@
       text-align: center;
 
       @include media-breakpoint-up(lg) {
-          text-align: left;
+        text-align: left;
       }
     }
 
@@ -113,7 +111,7 @@
           width: 130px;
           box-shadow: $box-shadow;
           border-radius: $border-radius-lg;
-          border-bottom: 10px solid $pink;
+          border-bottom: 10px solid $blue;
 
           &:first-child {
             @extend .mb-3;
@@ -134,7 +132,7 @@
       }
 
       figcaption {
-        border-top: 10px solid $pink;
+        border-top: 10px solid $blue;
       }
     }
   }
