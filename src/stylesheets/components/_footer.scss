@@ -1,6 +1,7 @@
 .c-footer-nav {
   padding-top : map-get($spacers, 3);
   border-top: 2px solid $gray-100;
+  color: $black;
 
   @include media-breakpoint-up(lg) {
     padding-top : map-get($spacers, 3);
@@ -46,6 +47,7 @@
   a:focus,
   a:link {
     font-weight: $font-weight-bold;
+    color: $black;
   }
 }
 

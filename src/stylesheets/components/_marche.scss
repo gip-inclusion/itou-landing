@@ -14,12 +14,125 @@
 
   &__col {
 
-    &--content {
-      //
+    &--article {
+      h2 {
+        position: relative;
+        @extend .mb-2;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 10px;
+          background-color: $cyan;
+          border-radius: 5px;
+          @extend .mt-3;
+        }
+      }
+
+      ol {
+        @extend .d-flex;
+        flex-direction: column;
+        @extend .mb-0;
+        @extend .p-0;
+        @extend .pb-3;
+
+        @include media-breakpoint-up(lg) {
+          flex-direction: row;
+          padding-bottom: 0 !important;
+        }
+
+        li {
+          list-style-position: inside;
+          @extend .pr-3;
+          @extend .pb-3;
+          font-weight: $font-weight-bold;
+
+          span {
+            font-weight: $font-weight-normal;
+          }
+        }
+      }
+
+      p {
+        @extend .mb-0;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+           text-align: left;
+        }
+      }
+
+      figure {
+        > div {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, calc(-50% - 20px));
+        }
+
+        figcaption {
+          @extend .pt-2;
+          @extend .mb-3;
+        }
+      }
     }
 
     &--figure {
-      //
+      figure {
+        > div {
+          top: 50%;
+          left: 0%;
+          transform: translate(-25%, calc(-50% - 20px));
+        }
+
+        figcaption {
+
+          img {
+            transform: translate(-55px, -10px);
+          }
+        }
+      }
+    }
+
+    figure {
+      position: relative;
+
+      > div {
+        position: absolute;
+        width: 130px;
+
+        div {
+          @extend .d-flex;
+          @extend .align-items-center;
+          @extend .justify-content-center;
+          background-color: $white;
+          min-height: 90px;
+          width: 130px;
+          box-shadow: $box-shadow;
+          border-radius: $border-radius-lg;
+          border-bottom: 10px solid $pink;
+
+          &:first-child {
+            @extend .mb-3;
+          }
+        }
+
+        span {
+          text-align: center;
+          line-height: $line-height-sm;
+
+          strong {
+            display: block;
+            font-family: $font-family-heading;
+            font-size: $font-size-base * 1.5;
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+
+      figcaption {
+        border-top: 10px solid $pink;
+      }
     }
   }
 }

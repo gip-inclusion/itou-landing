@@ -9,6 +9,7 @@ import imagemin from 'gulp-imagemin';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
+import purgecss from 'gulp-purgecss';
 
 const server = browserSync.create();
 
@@ -41,14 +42,44 @@ let notifyOnError = function(err) {
 
 // Styles Task
 export function styles() {
-  return gulp.src(paths.srcStyles)
-    .pipe(plumber({
-      errorHandler: notifyOnError
-    }))
+  return gulp
+    .src(paths.srcStyles)
+    .pipe(
+      plumber({
+        errorHandler: notifyOnError,
+      }),
+    )
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.distStyles));
+}
+
+// Purge Styles Task
+export function purgestyles() {
+  return gulp
+    .src(paths.srcStyles)
+    .pipe(
+      plumber({
+        errorHandler: notifyOnError,
+      }),
+    )
+    .pipe(sass())
+    .pipe(
+      cleanCSS({
+        level: {
+          2: {
+            all: true,
+          },
+        },
+      }),
+    )
+    .pipe(
+      purgecss({
+        content: [paths.distHtml + '*.html'],
+      }),
+    )
     .pipe(gulp.dest(paths.distStyles));
 }
 
@@ -132,7 +163,7 @@ function watch() {
 const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
 gulp.task('dev', dev);
 
-const build = gulp.series(html, vendors, scripts, styles, images);
+const build = gulp.series(html, vendors, scripts, purgestyles, images);
 gulp.task('build', build);
 
 export default dev;
