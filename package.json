@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "deploy": "gulp build && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "David Deloo <hello@hellodeloo.com>",
   "license": "ISC",
@@ -38,7 +38,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.2",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "purgecss-from-html": "^4.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",

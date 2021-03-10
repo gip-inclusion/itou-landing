@@ -58,29 +58,23 @@ export function styles() {
 
 // Purge Styles Task
 export function purgestyles() {
-  return gulp
-    .src(paths.srcStyles)
-    .pipe(
-      plumber({
-        errorHandler: notifyOnError,
-      }),
-    )
-    .pipe(sass())
-    .pipe(
-      cleanCSS({
-        level: {
-          2: {
-            all: true,
-          },
-        },
-      }),
-    )
-    .pipe(
-      purgecss({
-        content: [paths.distHtml + '*.html'],
-      }),
-    )
-    .pipe(gulp.dest(paths.distStyles));
+  return (
+    gulp
+      .src(paths.srcStyles)
+      .pipe(
+        plumber({
+          errorHandler: notifyOnError,
+        }),
+      )
+      .pipe(sass())
+      .pipe(cleanCSS())
+      .pipe(
+        purgecss({
+          content: [paths.distHtml + '*.html'],
+        }),
+      )
+      .pipe(gulp.dest(paths.distStyles))
+  );
 }
 
 // Javascript Task
@@ -139,7 +133,7 @@ function reload(done) {
 }
 
 // BrowserSync Serve Task
-function serve(done) {
+export function serve(done) {
   server.init({
     server: {
       baseDir: paths.distDir
