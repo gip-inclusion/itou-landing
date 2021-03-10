@@ -1,0 +1,127 @@
+.c-spie {
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
+  }
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
+  &__col {
+    &--spie {
+      margin-bottom: map-get($spacers, 5);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+
+      article {
+        position: relative;
+        @extend .p-5;
+        border-radius: $border-radius-lg;
+        box-shadow: $box-shadow-lg;
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          bottom: 0;
+          right: 0;
+          width: 230px;
+          height: 170px;
+          background-image: url('../../images/picto-rond.svg');
+          background-repeat: no-repeat;
+          background-size: 416px;
+          background-position: top left;
+        }
+      }
+
+      h2 {
+        position: relative;
+        @extend .mb-2;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 10px;
+          background-color: $cyan;
+          border-radius: 5px;
+          @extend .mt-3;
+        }
+      }
+
+      p {
+        margin-bottom: map-get($spacers, 4);
+      }
+    }
+
+    &--ambition {
+      article {
+        position: relative;
+        @extend .px-5;
+        @extend .pb-5;
+        @extend .pt-3;
+        border-radius: $border-radius-lg;
+        box-shadow: $box-shadow-lg;
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 310px;
+          height: 240px;
+          background-image: url('../../images/picto-rond.svg');
+          background-repeat: no-repeat;
+          background-size: 416px;
+          background-position: bottom right;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          width: 81px;
+          height: 240px;
+          background-image: url('../../images/ambition-visuel-01.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top left;
+        }
+      }
+
+      p {
+        margin-bottom: map-get($spacers, 4);
+      }
+    }
+
+    &__logo-spie {
+      margin-bottom: map-get($spacers, 3);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0 !important;
+      }
+
+      img {
+        transform: translateX(-14px);
+      }
+    }
+
+    &__cta {
+      @extend .mb-0;
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        text-align: right;
+      }
+    }
+  }
+}

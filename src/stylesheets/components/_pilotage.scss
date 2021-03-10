@@ -1,11 +1,11 @@
 .c-pilotage {
-  padding-top : map-get($spacers, 6);
-  padding-bottom : map-get($spacers, 4);
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
   border-top: 2px solid $gray-100;
 
   @include media-breakpoint-up(lg) {
-    padding-top : map-get($spacers, 6);
-    padding-bottom : map-get($spacers, 6);
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
   }
 
   &__container {
@@ -13,7 +13,6 @@
   }
 
   &__col {
-
     &--article {
       h2 {
         position: relative;
@@ -35,7 +34,7 @@
         flex-direction: column;
         @extend .mb-0;
         @extend .p-0;
-        @extend .pb-3;
+        @extend .pb-2;
 
         @include media-breakpoint-up(lg) {
           flex-direction: row;
@@ -54,7 +53,7 @@
       }
 
       p {
-        @extend .mb-5;
+        margin-bottom: map-get($spacers, 4);
       }
 
       figure {
@@ -80,7 +79,6 @@
         }
 
         figcaption {
-
           img {
             transform: translate(-55px, -10px);
           }
@@ -93,7 +91,7 @@
       text-align: center;
 
       @include media-breakpoint-up(lg) {
-          text-align: left;
+        text-align: left;
       }
     }
 

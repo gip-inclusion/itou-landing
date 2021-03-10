@@ -34,7 +34,7 @@
         flex-direction: column;
         @extend .mb-0;
         @extend .p-0;
-        @extend .pb-5;
+        @extend .pb-4;
 
         @include media-breakpoint-up(lg) {
           flex-direction: row;
@@ -52,7 +52,7 @@
       }
 
       p {
-        @extend .mb-5;
+        margin-bottom: map-get($spacers, 4);
       }
 
       figure {
