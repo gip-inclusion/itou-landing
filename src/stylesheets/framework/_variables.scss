@@ -247,9 +247,10 @@ $border-radius-sm: 0.125rem;
 
 $rounded-pill: 50rem !default;
 
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-sm: 0 2px 9px 0 rgba($black, 0.1);
 $box-shadow: 0 2px 9px 0 rgba($black, 0.5);
 $box-shadow-lg: 0 2px 19px 0 rgba($black, 0.1);
+$box-shadow-xl: 0 2px 19px 0 rgba($black, 0.4);
 
 $component-active-color: $white !default;
 $component-active-bg: theme-color('primary') !default;
@@ -258,7 +259,7 @@ $caret-width: 0.3em !default;
 $caret-vertical-align: $caret-width * 0.85 !default;
 $caret-spacing: $caret-width * 0.85 !default;
 
-$transition-base: all 0.2s ease-in-out !default;
+$transition-base: all 0.3s ease-in-out;
 $transition-fade: opacity 0.15s linear !default;
 $transition-collapse: height 0.35s ease !default;
 
@@ -331,9 +332,10 @@ $font-weight-bolder: 900;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.5 !default;
 
-$h1-font-size: $font-size-base * 2.5;
+$h1-font-size: $font-size-base * 3.75;
 $h2-font-size: $font-size-base * 3.75;
 $h2-font-size-sm: $font-size-base * 3.125;
+$h2-font-size-xs: $font-size-base * 2.75;
 $h3-font-size: $font-size-base * 2;
 $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.375;
@@ -442,7 +444,7 @@ $input-btn-padding-x-lg: 1rem;
 $input-btn-font-size-lg: $font-size-sm;
 $input-btn-line-height-lg: $line-height-sm;
 
-$input-btn-border-width: $border-width !default;
+$input-btn-border-width: 2px;
 
 // Buttons
 //
