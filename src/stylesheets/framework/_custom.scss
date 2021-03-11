@@ -55,3 +55,8 @@ h2 {
     font-size: $h2-font-size;
   }
 }
+
+[data-toggle],
+[data-btn] {
+  cursor: pointer;
+}
