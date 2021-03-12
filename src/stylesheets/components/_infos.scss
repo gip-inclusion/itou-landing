@@ -1,6 +1,6 @@
 .c-infos {
   padding-top: map-get($spacers, 4);
-  padding-bottom: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 6);
 
   @include media-breakpoint-up(lg) {
     padding-bottom: map-get($spacers, 6);
@@ -47,7 +47,15 @@
     }
 
     &--embed {
-      //
+      @extend .pt-5;
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 0 !important;
+      }
+
+      iframe {
+        min-height: 450px;
+      }
     }
 
     &__cta {
