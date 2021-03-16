@@ -136,7 +136,7 @@ $header-height: 100px;
     top: $header-height;
     right: 0;
     width: 75vw;
-    height: calc(100vh - $header-height);
+    height: calc(100vh - #{$header-height});
     background-color: $white;
     @extend .p-5;
     box-shadow: 0 19px 19px 0 rgba($black, 0.1);
@@ -151,10 +151,6 @@ $header-height: 100px;
           position: relative;
           @extend .my-4;
           @extend .mr-4;
-
-          &:last-child {
-            margin-left: -12px;
-          }
 
           &:first-child:before {
             content: '';
