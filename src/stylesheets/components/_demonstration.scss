@@ -13,6 +13,10 @@
 
   &__col {
     &--article {
+      article {
+        @extend .w-100;
+      }
+
       h2 {
         position: relative;
         @extend .mb-2;

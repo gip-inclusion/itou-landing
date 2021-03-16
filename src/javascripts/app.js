@@ -13,18 +13,10 @@ $(window).on('resize orientationchange', function() {
 });
 
 $(window).on('scroll', function() {
-  fixedNav();
+  //console.log('scroll');
 });
 
 $('[data-toggle=burger]').on('click tap', function(e) {
   e.preventDefault();
   stickyNav.toggleClass('is-opened');
 });
-
-function fixedNav() {
-  if ($(window).scrollTop() > stickyNav.data('top')) {
-    stickyNav.addClass('is-fixed');
-  } else {
-    stickyNav.removeClass('is-fixed');
-  }
-}

@@ -1,20 +1,17 @@
+$header-height: 100px;
+
 .c-header {
   background-color: $white;
   box-shadow: $box-shadow-lg;
   position: static;
-  top: auto;
-  left: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
-  &.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-
-    .c-header__row {
-      max-width: map-get($container-max-widths, 'xl');
-    }
+  + main {
+    margin-top: $header-height;
   }
 
   &.is-opened {
@@ -35,8 +32,12 @@
     max-width: map-get($container-max-widths, 'xl');
   }
 
+  &__row {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
   &__col {
-    min-height: 100px;
+    min-height: $header-height;
 
     &--nav {
       nav {
@@ -132,10 +133,10 @@
     display: none;
     position: fixed;
     z-index: 10;
-    top: 100px;
+    top: $header-height;
     right: 0;
     width: 75vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - $header-height);
     background-color: $white;
     @extend .p-5;
     box-shadow: 0 19px 19px 0 rgba($black, 0.1);
