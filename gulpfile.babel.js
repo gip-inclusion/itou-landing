@@ -120,6 +120,12 @@ export function images() {
     .pipe(gulp.dest(paths.distImages));
 }
 
+// Copy the CNAME file for configuring a subdomain in GitHub
+export function cname() {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest(paths.distHtml));
+}
+
 // Templates to HTML Task
 export function html() {
   return gulp.src(paths.srcHtml)
@@ -157,7 +163,7 @@ function watch() {
 const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
 gulp.task('dev', dev);
 
-const build = gulp.series(html, vendors, scripts, purgestyles, images);
+const build = gulp.series(html, cname, vendors, scripts, purgestyles, images);
 gulp.task('build', build);
 
 export default dev;
