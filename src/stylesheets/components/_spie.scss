@@ -87,14 +87,19 @@
           content: '';
           position: absolute;
           z-index: -1;
-          top: 0;
           right: 0;
           width: 81px;
           height: 240px;
           background-image: url('../images/ambition-visuel-01.png');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: top left;
+          background-position: top right;
+          top: 70px;
+          background-size: 60%;
+
+          @include media-breakpoint-up(sm) {
+            top: 0;
+            background-size: cover;
+          }
         }
       }
 
