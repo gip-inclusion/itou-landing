@@ -71,6 +71,7 @@ export function purgestyles() {
       .pipe(
         purgecss({
           content: [paths.distHtml + '*.html'],
+          safelist: ['is-opened', /^is-/]
         }),
       )
       .pipe(gulp.dest(paths.distStyles))
