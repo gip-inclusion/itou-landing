@@ -22,11 +22,13 @@ Si l'intégration est dégradée dans IE 11, on pourra vivre avec.
 
 Des screenshots de nos stats sont disponibles dans le dossier `compatibility`.
 
-## Congignes et commandes d'intégration
+## Congignes et commandes d'intégration et de modification du html
 
-Nécessite node `lts/erbium` ou superieur.
+Nécessite node `v12.22.0` ou superieur pour installer les dépendances `npm install`
 
-- Installer les dépendances `npm install`
-- Intégrer en live reload avec BrowserSynch `npm run dev`
-- Générer un `dist` optimisé `npm run build`
-- Déployer sur github page `npm run deploy`
+Ensuite, vous pouvez :
+1. Lancer la version locale en live reload avec `npm run dev`
+2. Intégrer ou modifier le html, scss ou js dans le répertoire `src`
+3. Générer une version de déploiement otimisée dans le répertoire `dist` avec la commande `npm run build`
+4. Commiter les modifications sur la branche `main` 
+5. Commiter sur la branche `gh-pages` et déployer automatiquement sur github pages avec `npm run deploy`
