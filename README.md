@@ -22,7 +22,7 @@ Si l'intégration est dégradée dans IE 11, on pourra vivre avec.
 
 Des screenshots de nos stats sont disponibles dans le dossier `compatibility`.
 
-## Congignes et commandes d'intégration et de modification du html
+## Consignes et commandes d'intégration et de modification du html
 
 Nécessite node `v12.22.0` ou superieur pour installer les dépendances `npm install`
 
