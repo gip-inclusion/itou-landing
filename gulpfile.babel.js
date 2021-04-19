@@ -10,6 +10,8 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
 import purgecss from 'gulp-purgecss';
+import ejs from'gulp-ejs';
+import rename from'gulp-rename';
 
 const server = browserSync.create();
 
@@ -27,7 +29,7 @@ const paths = {
   distScripts: 'dist/javascripts/',
   srcStyles: 'src/stylesheets/**/*.scss',
   distStyles: 'dist/stylesheets/',
-  srcHtml: 'src/**/*.html',
+  srcHtml: 'src/**/*.ejs',
   distHtml: 'dist/',
 };
 
@@ -130,6 +132,8 @@ export function cname() {
 // Templates to HTML Task
 export function html() {
   return gulp.src(paths.srcHtml)
+    .pipe(ejs())
+    .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.distHtml));
 }
 
