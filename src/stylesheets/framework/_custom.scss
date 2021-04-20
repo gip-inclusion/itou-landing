@@ -23,7 +23,7 @@ figure {
   }
 
   &.focus,
-  &y:focus {
+  &:focus {
     box-shadow: $box-shadow;
   }
 }
@@ -37,9 +37,9 @@ figure {
   }
 
   &.focus,
-  &y:focus {
+  &:focus {
     color: $primary;
-    box-shadow: $box-shadow;
+    box-shadow: none;
     text-decoration: none;
   }
 }

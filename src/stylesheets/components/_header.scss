@@ -139,6 +139,15 @@ $header-height: 100px;
         display: none;
       }
     }
+
+    &--title {
+
+      span {
+        @extend .mb-0;
+        @extend .mr-3;
+        font-size: $h4-font-size;
+      }
+    }
   }
 
   &__logo-ministere {
