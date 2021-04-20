@@ -141,6 +141,10 @@ $header-height: 100px;
     }
   }
 
+  &__logo-ministere {
+    transform: translateX(-12px);
+  }
+
   #burgerNav {
     display: none;
     position: fixed;

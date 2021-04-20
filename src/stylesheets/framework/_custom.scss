@@ -5,6 +5,7 @@ figure {
 }
 
 .btn-ico {
+
   span {
     @extend .d-inline-block;
     @extend .mr-1;
@@ -13,6 +14,7 @@ figure {
 
 .btn-primary {
   transition: $transition-base;
+
   &.hover,
   &:hover {
     color: $primary;
@@ -23,6 +25,22 @@ figure {
   &.focus,
   &y:focus {
     box-shadow: $box-shadow;
+  }
+}
+
+.btn-link {
+
+  &.hover,
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &.focus,
+  &y:focus {
+    color: $primary;
+    box-shadow: $box-shadow;
+    text-decoration: none;
   }
 }
 

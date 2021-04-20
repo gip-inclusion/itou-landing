@@ -1131,18 +1131,17 @@ $figure-caption-color: $gray-600 !default;
 
 $breadcrumb-font-size: null !default;
 
-$breadcrumb-padding-y: 0.75rem !default;
-$breadcrumb-padding-x: 1rem !default;
+$breadcrumb-padding-y: map-get($spacers, 4);
+$breadcrumb-padding-x: 0;
 $breadcrumb-item-padding: 0.5rem !default;
 
 $breadcrumb-margin-bottom: 1rem !default;
 
-$breadcrumb-bg: $gray-200 !default;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
-$breadcrumb-divider: quote('/') !default;
-
-$breadcrumb-border-radius: $border-radius !default;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray-900;
+$breadcrumb-active-color: $gray-900;
+$breadcrumb-divider: quote('');
+$breadcrumb-border-radius: none;
 
 // Carousel
 

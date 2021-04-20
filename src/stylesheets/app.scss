@@ -25,7 +25,7 @@
 @import 'node_modules/bootstrap/scss/nav';
 //@import "node_modules/bootstrap/scss/navbar";
 @import 'node_modules/bootstrap/scss/card';
-//@import "node_modules/bootstrap/scss/breadcrumb";
+@import "node_modules/bootstrap/scss/breadcrumb";
 //@import "node_modules/bootstrap/scss/pagination";
 @import 'node_modules/bootstrap/scss/badge';
 //@import "node_modules/bootstrap/scss/jumbotron";
@@ -50,6 +50,7 @@
 @import 'helpers/states';
 
 // Components
+@import 'components/main';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/marche';
@@ -62,6 +63,9 @@
 @import 'components/infos';
 @import 'components/plateforme';
 @import 'components/evenements';
+@import 'components/breadcrumb';
+@import 'components/assistance-intro';
+@import 'components/assistance-aide';
 
 // Vendors
 
