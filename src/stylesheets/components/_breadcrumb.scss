@@ -19,7 +19,7 @@
         position: absolute;
         display: block;
         left: map-get($spacers, 4);
-        bottom: - map-get($spacers, 1);
+        bottom: - map-get($spacers, 2);
         height: 5px;
         width: calc(100% - 1.5rem);
         border-radius: 5px;

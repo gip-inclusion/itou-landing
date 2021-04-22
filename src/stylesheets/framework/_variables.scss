@@ -322,9 +322,9 @@ $font-family-base: $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.125;
-$font-size-sm: $font-size-base * 0.875;
-$font-size-xs: $font-size-base * 0.75;
+$font-size-lg: $font-size-base * 1.125; // 18px
+$font-size-sm: $font-size-base * 0.875; // 14px
+$font-size-xs: $font-size-base * 0.75; // 12px
 
 $font-weight-lighter: 300;
 $font-weight-light: 300;
@@ -335,19 +335,19 @@ $font-weight-bolder: 900;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.5 !default;
 
-$h1-font-size: $font-size-base * 3.75;
-$h2-font-size: $font-size-base * 3.75;
-$h2-font-size-sm: $font-size-base * 3.125;
-$h2-font-size-xs: $font-size-base * 2.75;
-$h3-font-size: $font-size-base * 2;
-$h4-font-size: $font-size-base * 1.5;
-$h5-font-size: $font-size-base * 1.375;
-$h6-font-size: $font-size-base * 1.25;
+$h1-font-size: $font-size-base * 3.75; // 60px
+$h2-font-size: $font-size-base * 3.75; // 60px
+$h2-font-size-sm: $font-size-base * 3.125; // 50px
+$h2-font-size-xs: $font-size-base * 2.75; // 44px
+$h3-font-size: $font-size-base * 2; // 32px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.375; // 22px
+$h6-font-size: $font-size-base * 1.25; // 20px
 
 $headings-margin-bottom: $spacer;
 $headings-font-family: $font-family-heading;
 $headings-font-weight: 400;
-$headings-line-height: 1.2;
+$headings-line-height: 1.1;
 $headings-color: $gray-800;
 
 $display1-size: 6rem !default;
@@ -444,7 +444,7 @@ $input-btn-line-height-sm: $line-height-sm !default;
 
 $input-btn-padding-y-lg: 0.8rem;
 $input-btn-padding-x-lg: 1rem;
-$input-btn-font-size-lg: $font-size-sm;
+$input-btn-font-size-lg: $font-size-base;
 $input-btn-line-height-lg: $line-height-sm;
 
 $input-btn-border-width: 2px;
@@ -467,7 +467,7 @@ $btn-line-height-sm: $input-btn-line-height-sm !default;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
-$btn-font-size-lg: $input-btn-font-size-lg !default;
+$btn-font-size-lg: $input-btn-font-size;
 $btn-line-height-lg: $input-btn-line-height-lg !default;
 
 $btn-border-width: $input-btn-border-width !default;
