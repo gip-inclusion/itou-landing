@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
+    "importTheme": "gulp importItouThemeImages && gulp importItouThemeFonts",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "David Deloo <hello@hellodeloo.com>",
@@ -15,6 +16,13 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "browser-sync": "^2.27.5",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -30,23 +38,18 @@
     "gulp-purgecss": "^4.0.3",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
-    "node-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.2",
-    "purgecss-from-html": "^4.0.3",
+    "node-sass": "^6.0.1",
     "prettier": "^2.3.2",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "purgecss-from-html": "^4.0.3"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
+    "@popperjs/core": "^2.9.3",
     "bootstrap": "4.6.0",
     "bootstrap-icons": "^1.5.0",
-    "@popperjs/core": "^2.9.3"
+    "itoutheme": "github:betagouv/itou-theme#v0.1.1"
   }
 }

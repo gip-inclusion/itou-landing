@@ -1,0 +1,141 @@
+.s-assistance-aide {
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
+  border-top: 2px solid $gray-100;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
+  }
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
+  &__row {
+
+    &--header {
+      h3 {
+        @extend .mb-1;
+      }
+
+      p {
+        @extend .m-0;
+      }
+    }
+
+    &--footer {
+      text-align: center;
+      @extend .pt-6;
+
+      h4 {
+        margin-bottom: map-get($spacers, 3);
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: map-get($spacers, 5);
+        }
+      }
+
+      p {
+        @extend .m-0;
+      }
+    }
+  }
+
+  &__col {
+
+    &--cards-title {
+      position: relative;
+      margin: map-get($spacers, 5) 0;
+
+      > div {
+        @extend .mr-4;
+      }
+
+      &::after {
+        @extend .mb-3;
+        content: '';
+        height: 2px;
+        background-color: $gray-100;
+        flex: 1;
+      }
+    }
+
+    &--cards-block {
+      //
+    }
+
+    &--cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: map-get($spacers, 5);
+      margin: 0;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: map-get($spacers, 5);
+        margin: 0 0 map-get($spacers, 6) 0;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    @extend .d-flex;
+    @extend .align-items-center;
+    padding: map-get($spacers, 3);
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow-lg;
+    transition: $transition-base;
+
+    &:hover {
+      box-shadow: $box-shadow-xl;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 0;
+      width: 110px;
+      height: 110px;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center right;
+    }
+
+    .btn-link {
+      flex: 1;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      text-align: left;
+      padding-left: map-get($spacers, 2);
+    }
+
+
+    &--emplois {
+
+      &:before {
+        background-image: url('../images/assistance-card-bg-emplois.svg');
+      }
+    }
+
+    &--marche {
+
+      &:before {
+        background-image: url('../images/assistance-card-bg-marche.svg');
+      }
+    }
+
+    &--pilotage {
+
+      &:before {
+        background-image: url('../images/assistance-card-bg-pilotage.svg');
+      }
+    }
+  }
+}

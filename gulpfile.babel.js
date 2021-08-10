@@ -158,6 +158,18 @@ export function serve(done) {
   done();
 }
 
+// Import Images from Itou Theme
+export function importItouThemeImages() {
+  return gulp.src('./node_modules/itoutheme/src/images/**/*.{jpg,jpeg,png,svg,ico}')
+    .pipe(gulp.dest('src/images/'));
+}
+
+// Import Fonts from Itou Theme
+export function importItouThemeFonts() {
+  return gulp.src('./node_modules/itoutheme/src/fonts/**/*')
+    .pipe(gulp.dest('src/fonts/'));
+}
+
 // Watch Task
 function watch() {
   gulp.watch(paths.srcHtml, gulp.series(html, reload));

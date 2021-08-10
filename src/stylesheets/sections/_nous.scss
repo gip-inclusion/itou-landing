@@ -1,0 +1,97 @@
+.s-nous {
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: map-get($spacers, 6);
+    padding-bottom: map-get($spacers, 6);
+  }
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
+  &__col {
+    &--shadow {
+      position: relative;
+      @extend .py-5;
+      border-radius: $border-radius-lg;
+      background-color: $white;
+      box-shadow: $box-shadow-lg;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 220px;
+        height: 110px;
+        background-image: escape-svg(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="416" height="416"><path fill="#{$gray-100}" fill-rule="evenodd" d="M237.285 413.902C123.557 430.077 18.239 350.982 2.1 237.26-14.08 123.57 64.977 18.245 178.699 2.107c113.734-16.211 219.015 62.877 235.19 176.605 16.18 113.691-62.907 218.972-176.604 235.19z"/></svg>'));
+        background-repeat: no-repeat;
+        background-size: 416px;
+        background-position: top left;
+      }
+    }
+
+    &--article {
+      padding-left: map-get($spacers, 5);
+      padding-right: map-get($spacers, 5);
+
+      @include media-breakpoint-up(lg) {
+        padding-left: map-get($spacers, 3);
+        padding-right: map-get($spacers, 5);
+      }
+
+      h2 {
+        position: relative;
+        @extend .mb-2;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 10px;
+          background-color: #b8ceff;
+          border-radius: 5px;
+          @extend .mt-3;
+        }
+      }
+
+      h3 {
+        @extend .mb-4;
+      }
+
+      p {
+        @extend .mt-3;
+        @extend .mb-2;
+      }
+    }
+
+    &--figure {
+      padding-left: map-get($spacers, 5);
+      padding-right: map-get($spacers, 5);
+
+      @include media-breakpoint-up(lg) {
+        padding-left: map-get($spacers, 5);
+        padding-right: map-get($spacers, 3);
+      }
+
+      figure {
+        @extend .mb-3;
+
+        @include media-breakpoint-up(lg) {
+          margint-bottom: 0 !important;
+        }
+      }
+    }
+
+    &__cta {
+      @extend .mb-0;
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+      }
+    }
+  }
+}
