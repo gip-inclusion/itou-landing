@@ -24,99 +24,94 @@
     <link rel="stylesheet" href="./stylesheets/app.css" />
   </head>
 
-  <body id="top">
-    <header class="c-header" role="banner" id="header">
-      <section class="c-header__container container">
-        <div class="c-header__row row">
-          <div class="c-header__col c-header__col--logo col-auto d-flex align-items-center pr-0 pr-md-3">
-            <a href="#top" class="c-header__logo-ministere"><img src="./images/logo-ministere-travail.svg" alt="Ministère du travail"></a>
+  <body id="top" class="l-hp">
+
+    <header class="s-header s-header--plateforme sticky-top" role="banner" id="header">
+      <section class="s-header__container container">
+        <div class="s-header__row row">
+          <div class="s-header__col s-header__col--logo col-auto d-flex align-items-center pr-0 pr-md-3">
+            <a href="#top" class="s-header__logo-ministere"><img src="./images/logo-ministere-emploi.svg" alt="Ministère de l'emploi"></a>
           </div>
-          <div class="c-header__col c-header__col--logo col-auto d-flex align-items-center px-0 px-md-3">
-            <span><img src="./images/logo-generique-plateforme.svg" alt="Plateforme de l'inclusion" class="img-fluid"></span>
+          <div class="s-header__col s-header__col--logo col-auto d-flex align-items-center px-0 px-md-3">
+            <a href="./"/><img src="./images/logo-plateforme-inclusion.svg" alt="La Plateforme de l'inclusion"></a>
           </div>
-          <div class="c-header__col c-header__col--nav col d-none d-xl-inline-flex d-xl-flex align-items-center justify-content-end">
-            <nav>
+          <div class="s-header__col s-header__col--nav col d-none d-xl-inline-flex d-xl-flex align-items-center justify-content-end">
+            <nav role="navigation">
               <ul>
                 <li>
-                  <a href="https://emplois.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://emplois.inclusion.beta.gouv.fr" class="is-emploi" rel="noopener" target="_blank">
                     <span>Les emplois</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://communaute.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://communaute.inclusion.beta.gouv.fr" class="is-communaute" rel="noopener" target="_blank">
                     <span>La communauté</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://lemarche.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://lemarche.inclusion.beta.gouv.fr" class="is-marche" rel="noopener" target="_blank">
                     <span>Le marché</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://pilotage.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://pilotage.inclusion.beta.gouv.fr" class="is-pilotage" rel="noopener" target="_blank">
                     <span>Le pilotage</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
-                <!-- <li>
-                  <a href="https://assistance.inclusion.beta.gouv.fr/" rel="noopener" target="_blank" class="btn btn-lg btn-primary">Nous contacter</a>
-                </li> -->
               </ul>
             </nav>
           </div>
-          <div class="c-header__col c-header__col--burger col d-flex align-items-center justify-content-end d-xl-none" data-toggle="burger">
+          <div class="s-header__col s-header__col--burger col d-flex align-items-center justify-content-end d-xl-none" data-toggle="burger">
             <span id="burger"><img src="./images/picto-burger.svg" alt="Menu" /></span>
             <span id="close"><img src="./images/picto-close.svg" alt="Fermer" /></span>
           </div>
           <div id="burgerNav">
-            <nav>
+            <nav role="navigation">
               <ul>
                 <li>
-                  <a href="https://emplois.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://emplois.inclusion.beta.gouv.fr" class="is-emploi" rel="noopener" target="_blank">
                     <span>Les emplois</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://communaute.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://communaute.inclusion.beta.gouv.fr" class="is-communaute" rel="noopener" target="_blank">
                     <span>La communauté</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://lemarche.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://lemarche.inclusion.beta.gouv.fr" class="is-marche" rel="noopener" target="_blank">
                     <span>Le marché</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://pilotage.inclusion.beta.gouv.fr" rel="noopener" target="_blank">
+                  <a href="https://pilotage.inclusion.beta.gouv.fr" class="is-pilotage" rel="noopener" target="_blank">
                     <span>Le pilotage</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
-                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)" />
+                      <path fill="currentColor" d="M8.66517015,2.82577407 C8.34562066,3.18534827 8.34130426,3.73389577 8.67429909,4.0990571 L11.359,7.039 L1.46428571,7.03948778 C0.93400271,7.03948778 0.5,7.46464861 0.5,7.99431466 L0.506519822,8.10609811 C0.562491613,8.58254879 0.971880067,8.94914154 1.46428571,8.94914154 L11.354,8.949 L8.64311662,11.8995038 C8.28105469,12.2965343 8.31618249,12.9073498 8.7191121,13.2599671 C9.11604213,13.6073339 9.72177649,13.5739032 10.0771295,13.184224 L14.2544508,8.63732099 L14.3103844,8.56958432 L14.3728703,8.47818478 L14.4352531,8.3399089 L14.4491817,8.28987794 L14.462,8.193 L14.4705425,8.17556014 C14.4890266,8.12237865 14.5,8.06201568 14.5,7.99431466 L14.5,7.84422179 L14.4816817,7.71012206 L14.4677531,7.6600911 L14.4094639,7.52822311 L14.3908925,7.49865936 L14.3296866,7.41519605 L10.1084913,2.81453208 C9.75427649,2.42609678 9.14854213,2.39266615 8.7516121,2.74003295 L8.66517015,2.82577407 Z" transform="rotate(-45 10.56 5.732)"></path>
                     </svg>
                   </a>
                 </li>
-                <!-- <li>
-                  <a href="https://assistance.inclusion.beta.gouv.fr/" rel="noopener" target="_blank" class="btn btn-lg btn-primary">Nous contacter</a>
-                </li> -->
               </ul>
             </nav>
           </div>
@@ -124,27 +119,27 @@
       </section>
     </header>
 
-    <main class="c-main" role="main">
+    <main class="s-main" role="main">
 
-      <section class="c-plateforme">
-        <div class="c-plateforme__container container">
-          <div class="c-plateforme__row row">
-            <div class="c-plateforme__col c-plateforme__col--article col-12 col-lg-4">
+      <section class="s-plateforme">
+        <div class="s-plateforme__container container">
+          <div class="s-plateforme__row row">
+            <div class="s-plateforme__col s-plateforme__col--article col-12 col-lg-4">
               <article>
-                <h1>La <br class="d-none d-lg-inline"><strong>Plateforme</strong> dédiée à <br class="d-none d-lg-inline"><strong>l'inclusion</strong></h1>
+                <h1 class="h1 font-weight-normal">La <br class="d-none d-lg-inline"><strong>Plateforme</strong> dédiée à <br class="d-none d-lg-inline"><strong>l'inclusion</strong></h1>
                 <figure>
                   <img src="./images/plateforme-visuel-01.png" class="img-fluid" alt="">
                 </figure>
                 <p>Découvrez les outils qui portent l'inclusion au coeur de leur service. A chaque service, son objectif.</p>
               </article>
             </div>
-            <div class="c-plateforme__col c-plateforme__col--grid col-12 col-lg-8">
+            <div class="s-plateforme__col s-plateforme__col--grid col-12 col-lg-8">
               <div class="d-flex flex-column justify-content-between">
                 <div>
-                  <p class="c-plateforme__col__title"><img src="./images/logo-emplois.svg" height="80" alt="Les emplois de l'inclusion"></p>
+                  <p class="s-plateforme__col__title"><img src="./images/logo-emplois.svg" height="80" alt="Les emplois de l'inclusion"></p>
                   <p>Les emplois de l'inclusion est un service numérique de délivrance des PASS IAE et de mise en relation <strong>d'employeurs solidaires</strong> avec des <strong>candidats éloignés de l'emploi</strong> par le biais de tiers (prescripteurs habilités, orienteurs) ou en autoprescription.</p>
                 </div>
-                <p class="c-plateforme__col__cta">
+                <p class="s-plateforme__col__cta">
                   <a href="https://emplois.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-link btn-ico">
                     <span>Accéder aux emplois</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -155,10 +150,10 @@
               </div>
               <div class="d-flex flex-column justify-content-between">
                 <div>
-                  <p class="c-plateforme__col__title"><img src="./images/logo-communaute.svg" height="80" alt="Le marché de l'inclusion"></p>
+                  <p class="s-plateforme__col__title"><img src="./images/logo-communaute.svg" height="80" alt="Le marché de l'inclusion"></p>
                   <p>La communauté de l'inclusion est un espace d'<strong>échanges</strong>, de <strong>rencontres</strong> et de <strong>partages</strong> entre les acteurs et actrices de l'insertion. Il est possible de découvrir des bonnes pratiques, des nouveautés, de l'actualité, de poser ses questions.</p>
                 </div>
-                <p class="c-plateforme__col__cta">
+                <p class="s-plateforme__col__cta">
                   <a href="https://communaute.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-link btn-ico">
                     <span>Accéder à la communauté</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -169,10 +164,10 @@
               </div>
               <div class="d-flex flex-column justify-content-between">
                 <div>
-                  <p class="c-plateforme__col__title"><img src="./images/logo-marche.svg" height="80" alt="Le marché de l'inclusion"></p>
+                  <p class="s-plateforme__col__title"><img src="./images/logo-marche.svg" height="80" alt="Le marché de l'inclusion"></p>
                   <p>Vous souhaitez inscrire vos achats dans une démarche inclusive ? Le marché de l'inclusion est un service numérique permettant d'accéder à l'annuaire des <strong>entreprises sociales inclusives</strong> proposant des produits ou services inclusifs.</p>
                 </div>
-                <p class="c-plateforme__col__cta">
+                <p class="s-plateforme__col__cta">
                   <a href="https://lemarche.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-link btn-ico">
                     <span>Accéder au marché</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -183,10 +178,10 @@
               </div>
               <div class="d-flex flex-column justify-content-between">
                 <div>
-                  <p class="c-plateforme__col__title"><img src="./images/logo-pilotage.svg" height="80" alt="Le pilotage de l'inclusion"></p>
+                  <p class="s-plateforme__col__title"><img src="./images/logo-pilotage.svg" height="80" alt="Le pilotage de l'inclusion"></p>
                   <p>Le pilotage de l'inclusion a pour objectif de réduire la charge administrative (au niveau de la collecte et/ou du traitement des données) tout en maintenant/améliorant le niveau d'information grâce à des tableaux de bord.</p>
                 </div>
-                <p class="c-plateforme__col__cta">
+                <p class="s-plateforme__col__cta">
                   <a href="https://pilotage.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-link btn-ico">
                     <span>Accéder au pilotage</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -200,21 +195,21 @@
         </div>
       </section>
 
-      <section class="c-spie">
-        <div class="c-spie__container container">
-          <div class="c-spie__row row">
-            <div class="c-spie__col c-spie__col--spie col-12 col-lg-8 d-flex align-items-stretch">
+      <section class="s-spie">
+        <div class="s-spie__container container">
+          <div class="s-spie__row row">
+            <div class="s-spie__col s-spie__col--spie col-12 col-lg-8 d-flex align-items-stretch">
               <article class="d-flex flex-column justify-content-between h-100 w-100">
                 <div>
-                  <h2>SPIE</h2>
-                  <h3>Service public de l’insertion et de l’emploi</h3>
+                  <h2 class="h1 font-weight-normal"><strong>SPIE</strong></h2>
+                  <h3 class="h2 font-weight-normal">Service public de l’insertion et de l’emploi</h3>
                   <p>À l’occasion de la présentation de la stratégie nationale de prévention et de lutte contre la pauvreté, le 13 septembre 2018, le Président de la République a fixé une ambition claire à l’ensemble des acteurs impliqués dans les politiques d’insertion.</p>
                   <p>Au-delà des mesures prévues et financées dans le cadre de cette stratégie, il s’agit plus largement de repenser en profondeur l’organisation de l’ensemble de nos politiques en la matière en visant un objectif majeur :</p>
                   <p>La création d’un véritable service public de l’insertion et de l’emploi, dont l’État serait le garant.</p>
                 </div>
                 <div>
                   <div class="d-lg-flex align-items-end">
-                    <p class="c-spie__col__cta">
+                    <p class="s-spie__col__cta">
                       <a href="https://communaute.inclusion.beta.gouv.fr/c/spie/49" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                         <span>En savoir plus sur le SPIE</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -226,16 +221,16 @@
                 </div>
               </article>
             </div>
-            <div class="c-spie__col c-spie__col--ambition col-12 col-lg-4 d-flex align-items-stretch">
+            <div class="s-spie__col s-spie__col--ambition col-12 col-lg-4 d-flex align-items-stretch">
               <article class="d-flex flex-column justify-content-between h-100 w-100">
                 <div>
-                  <h3>L'insertion <br class="d-none d-lg-inline">par l'activité économique</h3>
-                  <h2>Ambition</h2>
+                  <h3 class="h2 font-weight-normal">L'insertion <br class="d-none d-lg-inline">par l'activité économique</h3>
+                  <h2 class="h1"><strong>Ambition</strong></h2>
                   <p>Le Pacte Ambition IAE a été réalisé pour que la France devienne une société plus inclusive. Son objectif de développer les passerelles entre acteurs de l’IAE et entreprises sociales inclusives pour passer de 140 000 personnes en parcours d’insertion à 240 000 d’ici 2022.
                     D'après Thibault Guilluy : "Il n’y a pas de société prospère et durable qui puisse tolérer en son sein une exclusion persistante"</p>
                 </div>
                 <div>
-                  <p class="c-spie__col__cta">
+                  <p class="s-spie__col__cta">
                     <a href="https://travail-emploi.gouv.fr/IMG/pdf/pacte_d_ambition_iae_sept_2019_synthese.pdf" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                       <span>Voir le Pacte Ambition IAE</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -250,14 +245,14 @@
         </div>
       </section>
 
-      <section class="c-infos">
-        <div class="c-infos__container container">
-          <div class="c-infos__row row">
-            <div class="c-infos__col c-infos__col--article col-12 col-lg-4">
+      <section class="s-infos">
+        <div class="s-infos__container container">
+          <div class="s-infos__row row">
+            <div class="s-infos__col s-infos__col--article col-12 col-lg-4">
               <article>
-                <h2>Dernières <br class="d-none d-lg-inline">infos</h2>
-                <h3>Les dernières actualités de la Plateforme</h3>
-                <p class="c-infos__col__cta">
+                <h2 class="h1"><strong>Dernières</strong> <br class="d-none d-lg-inline"><strong>infos</strong></h2>
+                <h3 class="h2 font-weight-normal">Les dernières actualités de la Plateforme</h3>
+                <p class="s-infos__col__cta">
                   <a href="https://www.linkedin.com/company/la-plateforme-de-l-inclusion/posts/?feedView=all" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Voir plus d'actualités</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -268,29 +263,29 @@
                 <ul>
                   <li>
                     <img src="./images/logo-linkedin.svg" alt="Logo LinkedIn">
-                    <a href="https://www.linkedin.com/company/la-plateforme-de-l-inclusion/" rel="noopener" target="_blank" title="Accédez à notre page LinkedIn" class="ml-2">Page linkedin</a>
+                    <a href="https://www.linkedin.com/company/la-plateforme-de-l-inclusion/" rel="noopener" target="_blank" title="Accédez à notre page LinkedIn" class="ml-2 text-decoration-none">Page linkedin</a>
                   </li>
                   <li>
                     <img src="./images/logo-twitter.svg" alt="Logo Twitter">
-                    <a href="https://twitter.com/inclusion_gouv" rel="noopener" target="_blank" title="Accédez à notre page Twitter" class="ml-2">Page twitter</a>
+                    <a href="https://twitter.com/inclusion_gouv" rel="noopener" target="_blank" title="Accédez à notre page Twitter" class="ml-2 text-decoration-none">Page twitter</a>
                   </li>
                 </ul>
               </article>
             </div>
-            <div class="c-infos__col c-infos__col--embed col-12 col-lg-4">
+            <div class="s-infos__col s-infos__col--embed col-12 col-lg-4">
               <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6774640485362368512" allowfullscreen="" title="Post intégré" width="100%" height="100%" frameborder="0"></iframe>
             </div>
-            <div class="c-infos__col c-infos__col--embed col-12 col-lg-4">
+            <div class="s-infos__col s-infos__col--embed col-12 col-lg-4">
               <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6773203975769473024" allowfullscreen="" title="Post intégré" width="100%" height="100%" frameborder="0"></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="c-emplois">
-        <div class="c-emplois__container container">
-          <div class="c-emplois__row row">
-            <div class="c-emplois__col c-emplois__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
+      <section class="s-emplois">
+        <div class="s-emplois__container container">
+          <div class="s-emplois__row row">
+            <div class="s-emplois__col s-emplois__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
               <figure>
                 <div>
                   <div>
@@ -306,16 +301,16 @@
                     </span>
                   </div>
                 </div>
-                <img src="./images/emplois-visuel-01.jpg" class="img-fluid" alt="">
+                <img src="./images/emplois-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                 <figcaption>
                   <img src="./images/logo-emplois.svg" height="50" alt="Les emplois de l'inclusion">
                 </figcaption>
               </figure>
             </div>
-            <div class="c-emplois__col c-emplois__col--article col-12 col-lg-7">
+            <div class="s-emplois__col s-emplois__col--article col-12 col-lg-7">
               <article>
-                <h2>Les emplois</h2>
-                <h3>Découvrez les offres d'emploi <br class="d-none d-lg-inline">des employeurs solidaires</h3>
+                <h2 class="h1"><strong>Les emplois</strong></h2>
+                <h3 class="h2 font-weight-normal">Découvrez les offres d'emploi <br class="d-none d-lg-inline">des employeurs solidaires</h3>
                 <figure class="d-block d-lg-none">
                   <div>
                     <div>
@@ -331,13 +326,13 @@
                       </span>
                     </div>
                   </div>
-                  <img src="./images/emplois-visuel-01.jpg" class="img-fluid" alt="">
+                  <img src="./images/emplois-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                   <figcaption>
                     <img src="./images/logo-emplois.svg" height="50" alt="Les emplois de l'inclusion'">
                   </figcaption>
                 </figure>
                 <p>Les emplois de l'inclusion est un service numérique de délivrance des PASS IAE et de mise en relation d'employeurs solidaires avec des candidats éloignés de l'emploi par le biais de tiers (prescripteurs habilités, orienteurs) ou en autoprescription.</p>
-                <p class="c-emplois__col__cta">
+                <p class="s-emplois__col__cta">
                   <a href="https://emplois.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Accéder aux emplois</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -351,13 +346,13 @@
         </div>
       </section>
 
-      <section class="c-communaute">
-        <div class="c-communaute__container container">
-          <div class="c-communaute__row row">
-            <div class="c-communaute__col c-communaute__col--article col-12 col-lg-7 d-flex align-items-center">
+      <section class="s-communaute">
+        <div class="s-communaute__container container">
+          <div class="s-communaute__row row">
+            <div class="s-communaute__col s-communaute__col--article col-12 col-lg-7 d-flex align-items-center">
               <article>
-                <h2>La Communauté</h2>
-                <h3>Échangez entre <br class="d-none d-lg-inline">professionnels de l’inclusion</h3>
+                <h2 class="h1"><strong>La Communauté</strong></h2>
+                <h3 class="h2 font-weight-normal">Échangez entre <br class="d-none d-lg-inline">professionnels de l’inclusion</h3>
                 <figure class="d-block d-lg-none">
                   <div>
                     <div>
@@ -373,7 +368,7 @@
                       </span>
                     </div>
                   </div>
-                  <img src="./images/communaute-visuel-01.jpg" class="img-fluid" alt="">
+                  <img src="./images/communaute-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                   <figcaption>
                     <img src="./images/logo-communaute.svg" height="50" alt="Le marché de l'inclusion">
                   </figcaption>
@@ -396,7 +391,7 @@
                     </ul>
                   </li>
                 </ol>
-                <p class="c-communaute__col__cta">
+                <p class="s-communaute__col__cta">
                   <a href="https://communaute.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Accéder à la communauté</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -406,7 +401,7 @@
                 </p>
               </article>
             </div>
-            <div class="c-communaute__col c-communaute__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
+            <div class="s-communaute__col s-communaute__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
               <figure>
                 <div>
                   <div>
@@ -422,7 +417,7 @@
                     </span>
                   </div>
                 </div>
-                <img src="./images/communaute-visuel-01.jpg" class="img-fluid" alt="">
+                <img src="./images/communaute-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                 <figcaption>
                   <img src="./images/logo-communaute.svg" height="50" alt="La communauté de l'inclusion'">
                 </figcaption>
@@ -432,22 +427,22 @@
         </div>
       </section>
 
-      <section class="c-nous">
-        <div class="c-nous__container container">
-          <div class="c-nous__row row no-gutters">
-            <div class="c-nous__col c-nous__col--shadow col-12">
-              <div class="c-nous__row row">
-                <div class="c-nous__col c-nous__col--figure col-12 col-lg-4 d-flex align-items-center">
+      <section class="s-nous">
+        <div class="s-nous__container container">
+          <div class="s-nous__row row no-gutters">
+            <div class="s-nous__col s-nous__col--shadow col-12">
+              <div class="s-nous__row row">
+                <div class="s-nous__col s-nous__col--figure col-12 col-lg-4 d-flex align-items-center">
                   <figure>
-                    <img src="./images/nous-visuel-01.jpg" class="img-fluid" alt="">
+                    <img src="./images/nous-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                   </figure>
                 </div>
-                <div class="c-nous__col c-nous__col--article col-12 col-lg-8 d-flex align-items-center">
+                <div class="s-nous__col s-nous__col--article col-12 col-lg-8 d-flex align-items-center">
                   <article>
-                    <h2>La Plateforme de l'inclusion, quésaco ?</h2>
+                    <h2 class="h1"><strong>La Plateforme de l'inclusion, quésaco ?</strong></h2>
                     <p>La Plateforme de l’inclusion et ses services ont été conçus dans le cadre du Pacte Ambition IAE, un dispositif d’État pour l’Insertion par l’Activité Économique des personnes éloignées de l’emploi en raison de difficultés sociales, professionnelles, ou de santé</p>
-                    <h3>L'équipe est là pour vous !</h3>
-                    <!-- <p class="c-nous__col__cta">
+                    <h3 class="h2 font-weight-normal">L'équipe est là pour vous !</h3>
+                    <!-- <p class="s-nous__col__cta">
                       <a href="https://assistance.inclusion.beta.gouv.fr/" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                         <span>Contacter nous</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -463,22 +458,22 @@
         </div>
       </section>
 
-      <section class="c-demonstration">
-        <div class="c-demonstration__container container">
-          <div class="c-demonstration__row row">
-            <div class="c-demonstration__col c-demonstration__col--figure col-12 col-lg-6 d-flex align-items-center px-4">
+      <section class="s-demonstration">
+        <div class="s-demonstration__container container">
+          <div class="s-demonstration__row row">
+            <div class="s-demonstration__col s-demonstration__col--figure col-12 col-lg-6 d-flex align-items-center px-4">
               <figure>
-                <a href="https://www.youtube.com/channel/UC06_yIYfzAiDOMTemH9q3OQ" rel="noopener" target="_blank"><img src="./images/demonstration-visuel-01.jpg" class="img-fluid" alt=""></a>
+                <a href="https://www.youtube.com/channel/UC06_yIYfzAiDOMTemH9q3OQ" rel="noopener" target="_blank"><img src="./images/demonstration-visuel-01.jpg" class="img-fluid img-fitcover" alt=""></a>
               </figure>
             </div>
-            <div class="c-demonstration__col c-demonstration__col--article col-12 col-lg-6 d-flex align-items-center">
+            <div class="s-demonstration__col s-demonstration__col--article col-12 col-lg-6 d-flex align-items-center">
               <article>
-                <h2>Démonstration</h2>
-                <h3>Les emplois de l'inclusion</h3>
+                <h2 class="h1"><strong>Démonstration</strong></h2>
+                <h3 class="h2 font-weight-normal">Les emplois de l'inclusion</h3>
                 <p>
                   Nos équipes organisent régulièrement des rendez-vous en visio-conférence afin de vous faire découvrir nos services et de vous proposer un moment d'échanges et de réponses à vos questions.
                 </p>
-                <p class="c-demonstration__col__cta">
+                <p class="s-demonstration__col__cta">
                   <a href="https://www.youtube.com/channel/UC06_yIYfzAiDOMTemH9q3OQ" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Voir toutes les vidéos</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -492,20 +487,20 @@
         </div>
       </section>
 
-      <section class="c-evenements">
-        <div class="c-evenements__container container">
-          <div class="c-evenements__row row">
-            <div class="c-evenements__col col-12">
+      <section class="s-evenements">
+        <div class="s-evenements__container container">
+          <div class="s-evenements__row row">
+            <div class="s-evenements__col col-12">
               <iframe width="100%" height="400" frameborder="0" src="https://app.livestorm.co/itou/upcoming?limit=3" title="Événements La Plateforme de l'inclusion | Livestorm"></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="c-pilotage">
-        <div class="c-pilotage__container container">
-          <div class="c-pilotage__row row">
-            <div class="c-pilotage__col c-pilotage__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
+      <section class="s-pilotage">
+        <div class="s-pilotage__container container">
+          <div class="s-pilotage__row row">
+            <div class="s-pilotage__col s-pilotage__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
               <figure>
                 <div>
                   <div>
@@ -521,16 +516,16 @@
                     </span>
                   </div>
                 </div>
-                <img src="./images/pilotage-visuel-01.jpg" class="img-fluid" alt="">
+                <img src="./images/pilotage-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                 <figcaption>
                   <img src="./images/logo-pilotage.svg" height="50" alt="Le pilotage de l'inclusion">
                 </figcaption>
               </figure>
             </div>
-            <div class="c-pilotage__col c-pilotage__col--article col-12 col-lg-7 d-flex align-items-center">
+            <div class="s-pilotage__col s-pilotage__col--article col-12 col-lg-7 d-flex align-items-center">
               <article>
-                <h2>Le pilotage</h2>
-                <h3>Optimisez vos reportings sur l'IAE</h3>
+                <h2 class="h1"><strong>Le pilotage</strong></h2>
+                <h3 class="h2 font-weight-normal">Optimisez vos reportings sur l'IAE</h3>
                 <figure class="d-block d-lg-none">
                   <div>
                     <div>
@@ -546,13 +541,13 @@
                       </span>
                     </div>
                   </div>
-                  <img src="./images/pilotage-visuel-01.jpg" class="img-fluid" alt="">
+                  <img src="./images/pilotage-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                   <figcaption>
                     <img src="./images/logo-pilotage.svg" height="50" alt="Le marché de l'inclusion'">
                   </figcaption>
                 </figure>
                 <p>Nous construisons et partageons des tableaux de bord permettant de mieux comprendre et analyser l'inclusion dans l'emploi, les personnes qui en bénéficient et les structures qui les accompagnent.</p>
-                <p class="c-pilotage__col__cta">
+                <p class="s-pilotage__col__cta">
                   <a href="https://pilotage.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Accéder au pilotage</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -566,13 +561,13 @@
         </div>
       </section>
 
-      <section class="c-marche">
-        <div class="c-marche__container container">
-          <div class="c-marche__row row">
-            <div class="c-marche__col c-marche__col--article col-12 col-lg-7 d-flex align-items-center">
+      <section class="s-marche">
+        <div class="s-marche__container container">
+          <div class="s-marche__row row">
+            <div class="s-marche__col s-marche__col--article col-12 col-lg-7 d-flex align-items-center">
               <article>
-                <h2>Le Marché</h2>
-                <h3>Trouvez votre prestation <br class="d-none d-lg-inline">socialement engagée et locale</h3>
+                <h2 class="h1"><strong>Le Marché</strong></h2>
+                <h3 class="h3 font-weight-normal">Trouvez votre prestation <br class="d-none d-lg-inline">socialement engagée et locale</h3>
                 <figure class="d-block d-lg-none">
                   <div>
                     <div>
@@ -588,13 +583,13 @@
                       </span>
                     </div>
                   </div>
-                  <img src="./images/marche-visuel-01.jpg" class="img-fluid" alt="">
+                  <img src="./images/marche-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                   <figcaption>
                     <img src="./images/logo-marche.svg" height="50" alt="Le marché de l'inclusion">
                   </figcaption>
                 </figure>
                 <p>Vous souhaitez inscrire vos achats dans une démarche inclusive et participer au développement économique et social de votre territoire ? <br class="d-none d-lg-inline">En quelques clics, demandez un devis sur un produit ou un service inclusif.</p>
-                <p class="c-marche__col__cta">
+                <p class="s-marche__col__cta">
                   <a href="https://lemarche.inclusion.beta.gouv.fr" rel="noopener" target="_blank" class="btn btn-lg btn-primary btn-ico">
                     <span>Accéder au marché</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">
@@ -604,7 +599,7 @@
                 </p>
               </article>
             </div>
-            <div class="c-marche__col c-marche__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
+            <div class="s-marche__col s-marche__col--figure d-none d-lg-inline-flex col-lg-5 d-lg-flex align-items-center px-4">
               <figure>
                 <div>
                   <div>
@@ -620,7 +615,7 @@
                     </span>
                   </div>
                 </div>
-                <img src="./images/marche-visuel-01.jpg" class="img-fluid" alt="">
+                <img src="./images/marche-visuel-01.jpg" class="img-fluid img-fitcover" alt="">
                 <figcaption>
                   <img src="./images/logo-marche.svg" height="50" alt="Le marché de l'inclusion'">
                 </figcaption>
@@ -632,24 +627,46 @@
 
     </main>
 
-    <footer class="c-footer" role="contentinfo">
-  <section class="c-footer-nav">
-    <div class="c-footer-nav__container container">
-      <div class="c-footer-nav__row row">
-        <div class="c-footer-nav__col col-12 col-lg-auto d-flex align-content-center">
-          <div class="c-footer-nav__logo">
-            <img src="./images/logo-rf.svg" alt="Rébublique Française">
-          </div>
+    <footer class="s-footer" role="contentinfo" id="footer">
+  <section class="s-footer-help">
+    <div class="s-footer-help__container container">
+      <div class="s-footer-help__row row">
+        <div class="s-footer-help__col col-12 col-lg"></div>
+        <div class="s-footer-help__col col-12 col-lg-auto">
+          <ul>
+            <li><span>Nous suivre</span></li>
+            <li><a href="https://twitter.com/inclusion_gouv" rel="noopener" target="_blank"><img src="./images/picto-twitter.svg" height="25" alt="Rejoignez-nous sur Twitter"></a></li>
+            <li><a href="https://www.linkedin.com/company/inclusion-gouv/" rel="noopener" target="_blank"><img src="./images/picto-linkedin.svg" height="25" alt="Rejoignez-nous sur Linkedin"></a></li>
+            <li><a href="https://www.facebook.com/inclusion.gouv/" rel="noopener" target="_blank"><img src="./images/picto-facebook.svg" height="25" alt="Rejoignez-nous sur Facebook"></a></li>
+            <li><a href="https://www.instagram.com/inclusion_gouv/" rel="noopener" target="_blank"><img src="./images/picto-instagram.svg" height="25" alt="Rejoignez-nous sur Instagram"></a></li>
+            <li><a href="https://www.youtube.com/channel/UC06_yIYfzAiDOMTemH9q3OQ" rel="noopener" target="_blank"><img src="./images/picto-youtube.svg" height="25" alt="Rejoignez-nous sur Youtube"></a></li>
+          </ul>
         </div>
-        <div class="c-footer-nav__col col-12 col-lg d-flex align-items-center">
-          <div>
-            <img src="./images/logo-generique-plateforme.svg" height="60" alt="Plateforme de l'inclusion">
+      </div>
+    </div>
+  </section>
 
+  <section class="s-footer-nav">
+    <div class="s-footer-nav__container container">
+      <div class="s-footer-nav__row row">
+        <div class="s-footer-nav__col col-5 col-lg-2 d-flex align-items-center">
+          <div class="s-footer-nav__logo">
+            <img src="./images/logo-republique-francaise.svg" alt="Rébublique Française" class="img-fluid">
           </div>
         </div>
-        <div class="c-footer-nav__col col-12 col-lg-6 d-flex align-items-center">
+        <div class="s-footer-nav__col col-7 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-start">
+          <div class="d-inline-block text-center">
+            <span class="d-block">
+              <img src="./images/logo-plateforme-inclusion.svg" height="60" alt="Plateforme de l'inclusion">
+            </span>
+            <span class="d-block mt-2">
+              <img src="./images/logo-accelere-betagouv.svg" alt="Accéléré par Beta.gouv.fr">
+            </span>
+          </div>
+        </div>
+        <div class="s-footer-nav__col col-12 col-lg-6 d-flex align-items-center">
           <div>
-            <p> Notre mantra issu du Pacte Ambition IAE : Permettre à chacun de trouver sa place. Libérons notre potentiel d'inclusion pour créer 100 000 emplois de plus.</p>
+            <p class="mb-3">Notre mantra issu du Pacte Ambition IAE : Permettre à chacun de trouver sa place. Libérons notre potentiel d'inclusion pour créer 100 000 emplois de plus.</p>
             <nav role="navigation">
               <ul>
                 <li><a href="https://emplois.inclusion.beta.gouv.fr" rel="noopener" target="_blank">Les emplois</a></li>
@@ -664,28 +681,56 @@
     </div>
   </section>
 
-  <section class="c-footer-legal">
-    <div class="c-footer-legal__container container">
-      <div class="c-footer-legal__row row">
-        <div class="c-footer-legal__col col-12 col-lg">
+  <section class="s-footer-legal">
+    <div class="s-footer-legal__container container">
+      <div class="s-footer-legal__row row">
+        <div class="s-footer-legal__col col-12 col-lg">
           <nav role="navigation">
             <ul>
               <li><a href="https://doc.inclusion.beta.gouv.fr/mentions/mentions-legales" rel="noopener" target="_blank">Mentions légales</a></li>
-              <!--
-              <li><a href="" rel="noopener" target="_blank">Gestion des cookies</a></li>
-              -->
+            </ul>
           </nav>
-          </ul>
         </div>
-        <div class="c-footer-legal__col col-12 col-lg"><span>© République Française 2020</span></div>
+        <div class="s-footer-legal__col col-12 col-lg text-lg-right"><span>© République Française 2021</span></div>
       </div>
     </div>
   </section>
 </footer>
 
 
-    <script src="./javascripts/vendors.js"></script>
     <script src="./javascripts/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js"></script>
+    <script type="text/javascript">
+      tarteaucitron.init({
+      "privacyUrl": "", /* Privacy policy url */
+      "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+      "cookieName": "tarteaucitron", /* Cookie name */
+      "orientation": "bottom", /* Banner position (top - bottom) */
+      "groupServices": false, /* Group services by category */
+      "showAlertSmall": false, /* Show the small banner on bottom right */
+      "cookieslist": false, /* Show the cookie list */
+      "closePopup": false, /* Show a close X on the banner */
+      "showIcon": true, /* Show cookie icon to manage cookies */
+      //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+      "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
+      "adblocker": false, /* Show a Warning if an adblocker is detected */
+      "DenyAllCta" : true, /* Show the deny all button */
+      "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+      "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+      "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+      "removeCredit": true, /* Remove credit link */
+      "moreInfoLink": true, /* Show more info link */
+      "useExternalCss": true, /* If false, the tarteaucitron.css file will be loaded */
+      "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+      "readmoreLink": "", /* Change the default readmore link */
+      "mandatory": true, /* Show a message about mandatory cookies */
+      });
+    </script>
+    <script type="text/javascript">
+      tarteaucitron.user.googleFonts = 'families';
+      (tarteaucitron.job = tarteaucitron.job || []).push('googlefonts');
+    </script>
   </body>
 
 </html>

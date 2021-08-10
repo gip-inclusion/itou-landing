@@ -1,0 +1,62 @@
+.s-assistance-intro {
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 4);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 6);
+  }
+
+  &__container {
+    max-width: map-get($container-max-widths, 'lg');
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -120px;
+      right: 0;
+      width: 98px;
+      height: 110px;
+      background-image: url('../images/assistance-picto-group.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__col {
+    &--article {
+      article {
+        @extend .w-100;
+      }
+
+      > * {
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+        }
+      }
+
+      h1 {
+        @extend .mb-2;
+      }
+
+      p {
+        @extend .m-0;
+      }
+    }
+
+    &--aside {
+      aside {
+        @extend .w-100;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

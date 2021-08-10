@@ -2,29 +2,29 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
+import browserify from 'gulp-browserify';
 import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import imagemin from 'gulp-imagemin';
-import sass from 'gulp-sass';
+import gulpSass from 'gulp-sass';
+import nodeSass from 'node-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cleanCSS from 'gulp-clean-css';
 import purgecss from 'gulp-purgecss';
 import ejs from'gulp-ejs';
 import rename from'gulp-rename';
+import clean from 'gulp-clean';
 
+const sass = gulpSass(nodeSass);
 const server = browserSync.create();
 
 const paths = {
   distDir: './dist/',
-  srcImages: 'src/images/*.{jpg,jpeg,png,svg}',
+  srcImages: 'src/images/*.{jpg,jpeg,png,svg,ico}',
   distImages: 'dist/images/',
-  srcVendors: [
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',
-  ],
-  distVendors: 'dist/javascripts/',
+  srcFonts: 'src/fonts/**/*',
+  distFonts: 'dist/fonts/',
   srcScripts: 'src/javascripts/app.js',
   distScripts: 'dist/javascripts/',
   srcStyles: 'src/stylesheets/**/*.scss',
@@ -87,20 +87,10 @@ export function scripts() {
     .pipe(plumber({
       errorHandler: notifyOnError
     }))
-    .pipe(babel())
+    .pipe(browserify())
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(gulp.dest(paths.distScripts));
-}
-
-export function vendors() {
-  return gulp.src(paths.srcVendors)
-    .pipe(plumber({
-      errorHandler: notifyOnError
-    }))
-    .pipe(uglify())
-    .pipe(concat('vendors.js'))
-    .pipe(gulp.dest(paths.distVendors));
 }
 
 // Compress Images Task
@@ -128,12 +118,24 @@ export function cname() {
     .pipe(gulp.dest(paths.distHtml));
 }
 
+// Copy the Font files
+export function fonts() {
+  return gulp.src(paths.srcFonts)
+    .pipe(gulp.dest(paths.distFonts));
+}
+
 // Templates to HTML Task
 export function html() {
   return gulp.src(paths.srcHtml)
     .pipe(ejs())
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.distHtml));
+}
+
+// Clean dist directory
+export function cleandist() {
+  return gulp.src(paths.distDir + '*')
+  .pipe(clean({force: true}));
 }
 
 // BrowserSync Reload Task
@@ -156,6 +158,18 @@ export function serve(done) {
   done();
 }
 
+// Import Images from Itou Theme
+export function importItouThemeImages() {
+  return gulp.src('./node_modules/itoutheme/src/images/**/*.{jpg,jpeg,png,svg,ico}')
+    .pipe(gulp.dest('src/images/'));
+}
+
+// Import Fonts from Itou Theme
+export function importItouThemeFonts() {
+  return gulp.src('./node_modules/itoutheme/src/fonts/**/*')
+    .pipe(gulp.dest('src/fonts/'));
+}
+
 // Watch Task
 function watch() {
   gulp.watch(paths.srcHtml, gulp.series(html, reload));
@@ -164,10 +178,10 @@ function watch() {
   gulp.watch(paths.srcImages, gulp.series(images, reload));
 }
 
-const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
+const dev = gulp.series(cleandist, html, scripts, styles, images, fonts, serve, watch);
 gulp.task('dev', dev);
 
-const build = gulp.series(html, cname, vendors, scripts, purgestyles, images);
+const build = gulp.series(cleandist, html, cname, scripts, purgestyles, images, fonts);
 gulp.task('build', build);
 
 export default dev;

@@ -1,3 +1,8 @@
+// Require libraries
+$ = require('jquery');
+require('popper.js');
+require('bootstrap');
+
 // Vars
 var stickyNav = $('#header');
 stickyNav.data('top', stickyNav.offset().top);
@@ -5,6 +10,7 @@ stickyNav.data('top', stickyNav.offset().top);
 // Initialisation
 $(window).on('load', function() {
   //console.log('load');
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 // Re-initialisation au resize
