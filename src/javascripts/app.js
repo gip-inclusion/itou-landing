@@ -1,3 +1,5 @@
+// Require libraries
+
 // Vars
 var stickyNav = $('#header');
 stickyNav.data('top', stickyNav.offset().top);

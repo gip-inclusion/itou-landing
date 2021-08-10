@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
+import browserify from 'gulp-browserify';
 import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
@@ -20,7 +21,7 @@ const server = browserSync.create();
 
 const paths = {
   distDir: './dist/',
-  srcImages: 'src/images/*.{jpg,jpeg,png,svg}',
+  srcImages: 'src/images/*.{jpg,jpeg,png,svg,ico}',
   distImages: 'dist/images/',
   srcFonts: 'src/fonts/**/*',
   distFonts: 'dist/fonts/',
@@ -86,7 +87,7 @@ export function scripts() {
     .pipe(plumber({
       errorHandler: notifyOnError
     }))
-    .pipe(babel())
+    .pipe(browserify())
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(gulp.dest(paths.distScripts));
