@@ -178,7 +178,7 @@ function watch() {
   gulp.watch(paths.srcImages, gulp.series(images, reload));
 }
 
-const dev = gulp.series(cleandist, html, scripts, styles, images, fonts, serve, watch);
+const dev = gulp.series(cleandist, html, cname, scripts, styles, images, fonts, serve, watch);
 gulp.task('dev', dev);
 
 const build = gulp.series(cleandist, html, cname, scripts, purgestyles, images, fonts);
