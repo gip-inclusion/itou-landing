@@ -72,7 +72,8 @@ export function purgestyles() {
       .pipe(cleanCSS())
       .pipe(
         purgecss({
-          content: [paths.srcHtml, paths.srcScripts]
+          content: [paths.srcHtml, paths.srcScripts],
+          safelist: [/^tarteaucitron/]
         }),
       )
       .pipe(gulp.dest(paths.distStyles))
