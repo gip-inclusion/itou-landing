@@ -47,6 +47,7 @@
         @extend .px-3;
         @extend .pt-3;
         @extend .pb-2;
+        position: relative;
         border-radius: $border-radius-lg;
         box-shadow: $box-shadow-lg;
         transition: $transition-base;
