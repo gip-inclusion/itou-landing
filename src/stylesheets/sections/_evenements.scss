@@ -18,5 +18,12 @@
       padding-left: map-get($spacers, 3);
       padding-right: map-get($spacers, 3);
     }
+
+    iframe {
+      min-height: 400px;
+      height: 100%;
+      width: 100%;
+      border: 0;
+    }
   }
 }
