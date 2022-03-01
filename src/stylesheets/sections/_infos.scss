@@ -35,6 +35,8 @@
 
       ul {
         @extend .list-unstyled;
+        @extend .d-flex;
+        @extend .flex-wrap;
         @extend .mb-0;
         @extend .mt-6;
         font-family: $font-family-heading;
@@ -42,6 +44,7 @@
 
         li {
           @extend .mb-2;
+          width: 50%
         }
       }
     }
