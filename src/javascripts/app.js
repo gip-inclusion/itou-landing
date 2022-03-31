@@ -9,7 +9,7 @@ const rootStyle = getComputedStyle(document.body);
 
 // Initialisation
 $(window).on('load', function() {
-  //console.log('load');
+  $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
 });
 
@@ -36,9 +36,9 @@ $('[data-toggle=burger]').on('click tap', function(e) {
 
 $('.input-group .form-control').on('focus', function(e) {
   e.preventDefault();
-  $(this).parent('.input-group').find('.input-group-text').css('border-color', rootStyle.getPropertyValue('--gray-800'));
-});
-$('.input-group .form-control').on('blur', function(e) {
+  $(this).parent('.input-group').toggleClass('has-focus');
+}).on('blur', function(e) {
   e.preventDefault();
-  $(this).parent('.input-group').find('.input-group-text').css('border-color', rootStyle.getPropertyValue('--gray-600'));
+  $(this).parent('.input-group').toggleClass('has-focus');
 });
+
