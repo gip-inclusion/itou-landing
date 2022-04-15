@@ -118,7 +118,7 @@
           border-radius: $border-radius-lg;
           border-bottom: 10px solid $emploi;
 
-          &:first-child {
+          &:not(:last-child) {
             @extend .mb-3;
           }
         }
