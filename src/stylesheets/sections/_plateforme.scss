@@ -75,10 +75,16 @@
     }
 
     &__title {
-      @extend .mb-0;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
 
       img {
-        transform: translate(-35px, -30px);
+
+        @include media-breakpoint-up(lg) {
+          transform: translate(-35px, -30px);
+        }
       }
     }
 
