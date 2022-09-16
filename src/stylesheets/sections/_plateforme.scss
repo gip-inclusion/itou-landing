@@ -49,12 +49,8 @@
         @extend .pb-2;
         position: relative;
         border-radius: $border-radius-lg;
-        box-shadow: $box-shadow-lg;
+        border: 1px solid $border-color;
         transition: $transition-base;
-
-        &:hover {
-          box-shadow: $box-shadow-xl;
-        }
 
         &:first-child {
           border-bottom: 10px solid $emploi;
